@@ -21,3 +21,4 @@ http://localhost:8000/
 * master 初期状態
 * devlop 開発サイト
 * helloapp helloサイト作成(/hello/)
+* helloapp2 helloサイト作成2(/hello/)
