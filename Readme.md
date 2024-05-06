@@ -19,4 +19,5 @@ http://localhost:8000/
 ## 各種ブランチ
 
 * master 初期状態
-* hello helloサイト作成(/hello/)
+* devlop 開発サイト
+* helloapp helloサイト作成(/hello/)
