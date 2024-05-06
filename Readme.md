@@ -30,4 +30,3 @@ docker-compose exec django /bin/bash
 python3 manage.py makemigrations hello
 python3 manage.py migrate
 ```
-
