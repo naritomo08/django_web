@@ -22,3 +22,12 @@ http://localhost:8000/
 * devlop 開発サイト
 * helloapp helloサイト作成(/hello/)
 * helloapp2 helloサイト作成2(/hello/)
+* dbmigrate mysqlへのmigrate設定
+
+```bash
+以下のコマンドを入力する。
+docker-compose exec django /bin/bash
+python3 manage.py makemigrations hello
+python3 manage.py migrate
+```
+
