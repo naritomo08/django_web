@@ -23,7 +23,11 @@ http://localhost:8000/
 ```bash
 以下のサイトを参照できること。
 http://localhost:8000/admin/
-http://localhost:8000/home/
+管理者ログインサイト
+http://localhost:8000/hello/
+helloサイト
+http://localhost:8000/
+BBSサイト
 ```
 
 * initialize 初期状態
