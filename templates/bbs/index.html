@@ -8,4 +8,7 @@
             <p><a href='{% url "bbs:detail" article.id %}'>{{ article.content }}</a></p>
         </div>
     {% endfor %}
+    <div>
+        <button onclick='location.href="{% url "bbs:create" %}"'>新規投稿</button>
+    </div>
 {% endblock %}
