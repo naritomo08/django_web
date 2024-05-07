@@ -42,3 +42,5 @@ python3 manage.py createsuperuser
 以下のサイトに入り、Articleテーブルにデータを追加する。
 http://localhost:8000/admin/
 ```
+
+* classbase クラスベースの汎用ビューへの変更サイト
