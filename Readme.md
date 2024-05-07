@@ -61,7 +61,7 @@ python3 manage.py makemigrations bbs
 python3 manage.py migrate
 ```
 
-* bbsIndex 投稿インデックスページ
+* bbsindex 投稿インデックスページ
 
 ```bash
 http://localhost:8000/
