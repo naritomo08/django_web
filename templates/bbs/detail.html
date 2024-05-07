@@ -7,6 +7,7 @@
             <p>最終更新:{{ article.updated_at }}</p>
             <p>{{ article.content }}</p>
             <p><a href='{% url "bbs:update" article.pk %}'>編集</a></p>
+            <p><a href='{% url "bbs:delete" article.pk %}'>削除</a></p>
         </div>
     <p><a href='{% url "bbs:index" %}'>一覧ページへ戻る</a></p>
 {% endblock %}
