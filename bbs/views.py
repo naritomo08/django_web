@@ -13,3 +13,8 @@ class CreateView(generic.edit.CreateView):
     model = Article
     template_name = 'bbs/create.html'
     fields = '__all__'
+
+class UpdateView(generic.edit.UpdateView):
+    model = Article
+    template_name = 'bbs/create.html'
+    fields = '__all__'
