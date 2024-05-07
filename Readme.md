@@ -44,3 +44,11 @@ http://localhost:8000/admin/
 ```
 
 * classbase クラスベースの汎用ビューへの変更サイト
+* bbsbase つぶやきサイト作成base
+
+```bash
+以下のコマンドを入力する。
+docker-compose exec django /bin/bash
+python3 manage.py makemigrations bbs
+python3 manage.py migrate
+```
