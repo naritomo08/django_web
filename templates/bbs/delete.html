@@ -1,13 +1,16 @@
 {% extends "base.html" %}
+{% load django_bootstrap5 %}
 
 {% block content %}
-    <h1>投稿の削除</h1>
+    <h1 class="mt-5">投稿の削除</h1>
     <p>'{{ object.id}}'の投稿を削除しますか？</p>
 
     <form action='' method='post'>{% csrf_token %}
-        <button type='submit'>削除</button>
+        {% bootstrap_button button_type="submit" button_class="btn-danger" content="削除" size="md" %}
     </form>
-    <div>
-        <button onclick='Javascript:history.back()'>戻る</button>
+    <div class="mt-3">
+        <a href='{% url "bbs:index" %}'>
+            {% bootstrap_button button_type="submit" button_class="btn-secondary" content="戻る" size="md" %}
+        </a>
     </div>
 {% endblock %}
