@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os,environ
+
+env = environ.Env()
+env.read_env('.env')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,13 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-28j!!%f^w8^#3w-bso@cnahe)9e)vep2qc8@o$8+u$$c@mw=4#'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool('DEBUG', default=False)
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = [env('ALLOWED_HOSTS')]
 
 # Application definition
 
@@ -82,12 +85,12 @@ DATABASES = {
     #    'NAME': BASE_DIR / 'db.sqlite3',
     #}
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_local',
-        'USER': 'django_user',
-        'PASSWORD': 'secret',
-        'HOST': 'db',
-        'PORT': '3306'
+        'ENGINE': env.get_value('DATABASE_ENGINE',default='django.db.backends.mysql'),
+        'NAME': env.get_value('DATABASE_NAME',default='django_local'),
+        'USER': env.get_value('DATABASE_USER',default='django_user'),
+        'PASSWORD': env.get_value('DATABASE_PASSWORD',default='secret'),
+        'HOST': env.get_value('DATABASE_HOST',default='db'),
+        'PORT': env.get_value('DATABASE_PORT',default='3306'),
     }
 }
 
@@ -126,8 +129,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_URL = '/static/'
+STATIC_ROOT = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

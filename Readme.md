@@ -11,9 +11,6 @@ cp .env.example .env
 git clone -b <指定のブランチ> https://github.com/naritomo08/django_web src
 docker-compose build
 docker-compose up -d
-
-以下のサイトを参照
-http://localhost:8000/
 ```
 
 ## 各種ブランチ
@@ -21,6 +18,18 @@ http://localhost:8000/
 * main 最新ブランチ
 
 ```bash
+展開後以下の作業を行うこと。
+
+cp src/.env.example src/.env
+
+.env内のSECRET_KEYを以下の方法で入手する。
+
+docker-compose exec django /bin/bash
+python manage.py shell
+from django.core.management.utils import get_random_secret_key
+get_random_secret_key()
+→出てきた値を.env内のsecret_keyに設定すること。
+
 以下のサイトを参照できること。
 http://localhost:8000/admin/
 管理者ログインサイト
@@ -105,8 +114,26 @@ http://localhost:8000/
 ```
 
 * bbsbootstrap bootstrap適用
+
 ```bash
 http://localhost:8000/
 →投稿インデックスページ参照できること。
 →様々な大きさに変更しレスポンシブになっていること。
+```
+
+* django_secret djamgoセキュア化
+
+```bash
+cp src/.env.example src/.env
+
+.env内のSECRET_KEYを以下の方法で入手する。
+
+docker-compose exec django /bin/bash
+python manage.py shell
+from django.core.management.utils import get_random_secret_key
+get_random_secret_key()
+→出てきた値を.env内のsecret_keyに設定すること。
+
+docker-compose down
+docker-compose up -d
 ```
