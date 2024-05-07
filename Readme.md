@@ -60,3 +60,10 @@ docker-compose exec django /bin/bash
 python3 manage.py makemigrations bbs
 python3 manage.py migrate
 ```
+
+* bbsIndex 投稿インデックスページ
+
+```bash
+http://localhost:8000/
+→投稿インデックスページ参照できること。
+```
