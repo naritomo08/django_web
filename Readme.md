@@ -40,5 +40,5 @@ python3 manage.py createsuperuser
 スーパーユーザ、メールアドレス、パスワードを設定
 
 以下のサイトに入り、Articleテーブルにデータを追加する。
-http://localhost:8000/admin
+http://localhost:8000/admin/
 ```
