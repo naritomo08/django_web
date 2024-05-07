@@ -71,3 +71,11 @@ python3 manage.py migrate
 http://localhost:8000/
 →投稿インデックスページ参照できること。
 ```
+
+* bbsdetail 投稿詳細ページ
+
+```bash
+http://localhost:8000/
+→投稿インデックスページ参照できること。
+→投稿部分のリンクをクリックして要項詳細を参照できること。
+```
