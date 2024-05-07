@@ -8,3 +8,8 @@ class IndexView(generic.ListView):
 class DetailView(generic.DetailView):
     model = Article
     template_name = 'bbs/detail.html'
+
+class CreateView(generic.edit.CreateView):
+    model = Article
+    template_name = 'bbs/create.html'
+    fields = '__all__'
