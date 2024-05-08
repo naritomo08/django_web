@@ -5,7 +5,7 @@ djangoによるWebページ
 ## 展開方法
 
 ```bash
-git clone -b devlop https://github.com/naritomo08/django_docker
+git clone -b djangosite https://github.com/naritomo08/django_docker
 cd django_docker
 cp .env.example .env
 git clone -b <指定のブランチ> https://github.com/naritomo08/django_web src
