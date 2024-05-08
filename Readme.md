@@ -139,8 +139,17 @@ docker-compose up -d
 ```
 
 * bbssearch
+
 ```bash
 http://localhost:8000/
 →投稿インデックスページ参照できること。
 →投稿検索できること。
+```
+
+* bbsencrypt
+
+```bash
+http://localhost:8000/
+→投稿インデックスページ参照できること。
+→ユーザー登録、投稿できること。
 ```

@@ -23,6 +23,8 @@ urlpatterns = [
     path('bbs/', include('bbs.urls')),
     path('hello/', include('hello.urls')),
     path('admin/', admin.site.urls),
+    path('accounts/', include('accounts.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('', RedirectView.as_view(url='/bbs/')),
     re_path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 ]
