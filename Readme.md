@@ -137,3 +137,10 @@ get_random_secret_key()
 docker-compose down
 docker-compose up -d
 ```
+
+* bbssearch
+```bash
+http://localhost:8000/
+→投稿インデックスページ参照できること。
+→投稿検索できること。
+```
